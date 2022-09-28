@@ -1,0 +1,101 @@
+.suprasistema {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.navshow{
+    opacity: 0.5;
+    background: transparent !important;
+    /* margin-left: 8%; */
+}
+
+
+
+.menu ul li a{
+    color: white;
+}
+.menu ul li a:hover{
+    color: #7fff00;
+}
+
+header{
+    position: static;
+    width: 100%;
+    background: transparent !important;
+    border-bottom: 1px solid gray;
+}
+#btn-menu{
+    display: none;
+
+}
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    /* border-right: 1px solid #fff; */
+}
+header label:hover{
+    cursor: pointer;
+    /* background: black; */
+}
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+.menu li{
+    flex-grow: 1;
+}
+
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color:#fff;
+    text-decoration:none;
+
+}
+
+
+
+@media (max-width:768px){
+    header label{
+        display: block;
+    }
+    header{
+        border-bottom: transparent;
+        position:fixed;
+    }
+    .menu{
+        position: absolute;
+        background: rgb(0, 0, 0);
+        width: 70%;
+        margin-left: -100%;
+        z-index: 1000000;
+    }
+    .menu ul{
+        flex-direction: column;
+        /* Se corre las letras con el margin */
+    }
+    .menu li{
+        border-top: 1px solid #fff;
+    }
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+    #img-menu{
+        margin-top: 25%;
+        /* margin-left: 25%; */
+        max-width: 50px;
+        height: 100%;
+           
+    }
+    .navshow{
+        margin-left: 2%;
+    }
+    
+}
